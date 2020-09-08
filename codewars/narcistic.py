@@ -9,5 +9,7 @@ def narcissistic(value):
     if a == value: return True
     else: return False
     
-print(narcissistic(124))
-
+def refactored(value):
+    a = str(value)
+    nvalue = sum(int(i) ** len(a) for i in a) #funkcja sum jest genialna
+    return nvalue == value #zapamiętaj to
